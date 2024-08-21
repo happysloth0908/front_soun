@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body > div {
+      background: yellow;
+    }
+    div {
+      background: #121287;
+    }
+    div#id1 {
+      background: #1233;
+    }
+    div.class1 {
+      background: red;
+    }
+    body div.class1 {
+      background: pink;
+    }
+    [title^="abcd"] {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div title="abcd">
+    우선순위 연습하기
+  </div>
+  <div id="id1" class="class1" style="background: red;">
+    !important > inline > #id > .class > element > * 
+  </div>
+  <div>
+    동일한 우선순위일 경우 나중에 선언된 것으로 적용
+  </div>
+</body>
+</html>
